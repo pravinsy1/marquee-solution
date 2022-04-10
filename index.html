@@ -19,6 +19,10 @@
     ></script>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="swiper-bundle.css" />
+    <!-- <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    /> -->
 
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
   </head>
@@ -54,34 +58,52 @@
         </div>
         <form action="">
           <h2>Contact Us</h2>
-
+          <!-- <div class="field"> -->
           <input
             class="textbox"
             id="First_name"
             type="text"
             placeholder="First Name"
           />
-
+          <!-- <label for="First_name">First Name</label> -->
+          <!-- </div> -->
+          <!-- <div id="tooltip" role="tooltip">
+            This field can’t be empty. Please fill it in.
+            <div id="arrow" data-popper-arrow></div>
+          </div> -->
+          <!-- <div class="field"> -->
           <input
             class="textbox"
             id="Last_name"
             type="text"
             placeholder="Last Name"
           />
+          <!-- <label for="Last_name">Last Name</label> -->
+          <!-- </div> -->
 
+          <!-- <div id="tooltip" role="tooltip">
+            My tooltip
+            <div id="arrow" data-popper-arrow></div>
+          </div> -->
+          <!-- <div class="field"> -->
           <input
             class="textbox"
             id="Business_Email"
             type="text"
             placeholder="Business Email"
           />
+          <!-- <label for="Business_Email">Business Email</label> -->
+          <!-- </div> -->
 
+          <!-- <div class="field"> -->
           <input
             class="textbox"
             id="Company"
             type="text"
             placeholder="Company"
           />
+          <!-- <label for="Company">Company</label> -->
+          <!-- </div> -->
 
           <select name="country" id="country">
             <option value="country">Country</option>
@@ -258,7 +280,15 @@
             <img class="info" src="info.svg" alt="" />
           </div>
         </div>
-
+        <!-- <div class="tooltip secondary-cta">
+          Insuarance Advocacy
+          <span class="tooltiptext">Tooltip text</span>
+        </div> -->
+        <!-- <div id="tooltip" role="tooltip">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore.
+          <div id="arrow" data-popper-arrow></div>
+        </div> -->
         <div class="secondary-cta">Employment Advocacy</div>
         <div class="secondary-cta">Aftercare Planning</div>
       </div>
@@ -313,8 +343,10 @@
       <a href="#vid" onclick="lightbox_open();">
         <div class="play-btn">
           <img class="polygon" src="Polygon.svg" alt="" />
-          <div class="ellipse"></div></div
-      ></a>
+          <div class="ellipse"></div>
+          <!-- <div class="triangle"></div> -->
+        </div></a
+      >
       <img class="logo" src="logo.svg" alt="" />
 
       <div id="light">
@@ -328,6 +360,10 @@
       </div>
 
       <div id="fade" onClick="lightbox_close();"></div>
+
+      <!-- <div>
+        <a href="#" onclick="lightbox_open();"></a>
+      </div> -->
     </section>
 
     <!-- FOOTER -->
