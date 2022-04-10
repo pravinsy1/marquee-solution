@@ -18,10 +18,7 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
-    />
+    <link rel="stylesheet" href="swiper-bundle.css" />
 
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
   </head>
@@ -44,8 +41,11 @@
       </header>
 
       <div class="hero">
+        <!-- <img class="hero-bg" src="background.png" alt="" /> -->
         <div class="hero-text">
-          <h1><span class="stroke">GET AN</span> INTERVENTION</h1>
+          <h1 class="stroke-white">
+            <span class="">GET AN</span> INTERVENTION
+          </h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -61,32 +61,28 @@
             type="text"
             placeholder="First Name"
           />
-          <!-- <div id="tooltip" role="tooltip">
-            This field can’t be empty. Please fill it in.
-            <div id="arrow" data-popper-arrow></div>
-          </div> -->
+
           <input
             class="textbox"
             id="Last_name"
             type="text"
             placeholder="Last Name"
           />
-          <!-- <div id="tooltip" role="tooltip">
-            My tooltip
-            <div id="arrow" data-popper-arrow></div>
-          </div> -->
+
           <input
             class="textbox"
             id="Business_Email"
             type="text"
             placeholder="Business Email"
           />
+
           <input
             class="textbox"
             id="Company"
             type="text"
             placeholder="Company"
           />
+
           <select name="country" id="country">
             <option value="country">Country</option>
           </select>
@@ -109,7 +105,9 @@
         <img src="image3.png" alt="" />
       </div>
       <div class="flex-container">
-        <h2 class="uppercase">WE UNDERSTAND</h2>
+        <h2 class="uppercase stroke-black">
+          <span class="">WE </span>UNDERSTAND
+        </h2>
         <div class="hr"></div>
       </div>
 
@@ -157,34 +155,69 @@
           <!-- Slides -->
           <div class="swiper-slide">
             <img class="profile" src="profile image.png" alt="" />
+
+            <div class="text-field4">
+              <div class="name">Abbie Harvey</div>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation. Lorem ipsum
+                dolor sit amet, consectetur!
+              </p>
+              <img class="quote" src="“.png" alt="" />
+            </div>
           </div>
-          <div class="swiper-slide">Slide 2</div>
-          <div class="swiper-slide">Slide 3</div>
-          ...
+          <div class="swiper-slide">
+            <img class="profile" src="image 2.2.png" alt="" />
+
+            <div class="text-field4">
+              <div class="name">John Doe</div>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation. Lorem ipsum
+                dolor sit amet, consectetur!
+              </p>
+              <img class="quote" src="“.png" alt="" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img class="profile" src="image 2.3.png" alt="" />
+
+            <div class="text-field4">
+              <div class="name">Jane Doe</div>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation. Lorem ipsum
+                dolor sit amet, consectetur!
+              </p>
+              <img class="quote" src="“.png" alt="" />
+            </div>
+          </div>
         </div>
-        <!-- If we need pagination -->
-        <div class="swiper-pagination"></div>
 
-        <!-- If we need navigation buttons -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-
-        <!-- If we need scrollbar -->
-        <div class="swiper-scrollbar"></div>
+        <!-- navigation buttons -->
+        <div class="swiper-button-prev" style="top: 140px"></div>
+        <div class="swiper-button-next" style="top: 140px"></div>
       </div>
+      <!-- pagination -->
+      <div class="swiper-pagination"></div>
     </section>
 
     <!-- SECTION 4 -->
     <section class="section4">
       <div class="flex-container">
-        <h2 class="uppercase">WE CAN ORGANIZE EVERYTHING</h2>
+        <h2 class="uppercase stroke-black">
+          <span class="">WE </span>CAN ORGANIZE EVERYTHING
+        </h2>
         <div class="hr"></div>
       </div>
       <div class="text-field">
         <div class="container">
           <p class="first-para">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore.
+            <b>Lorem ipsum</b> dolor sit amet, consectetur adipiscing elit, sed
+            do eiusmod tempor incididunt ut labore.
           </p>
         </div>
         <div class="container">
@@ -218,9 +251,12 @@
           class="secondary-cta"
           data-toggle="tooltip"
           data-placement="bottom"
+          aria-describedby="tooltip"
         >
           Insuarance Advocacy
-          <div class="circle"><img class="info" src="info.svg" alt="" /></div>
+          <div class="circle">
+            <img class="info" src="info.svg" alt="" />
+          </div>
         </div>
 
         <div class="secondary-cta">Employment Advocacy</div>
@@ -230,48 +266,68 @@
 
     <!-- SECTION 5 -->
     <section class="section5">
-      <div class="text-field3">
-        <h2>WATCH THE VIDEO</h2>
-        <div class="flex-container">
-          <div class="checkmark">
-            <img src="/Checkmark.png" alt="" />
+      <div class="left">
+        <div class="text-field3">
+          <h2 class="stroke-white"><span>WATCH </span>THE VIDEO</h2>
+          <div class="flex-container">
+            <div class="checkmark">
+              <img src="Checkmark.png" alt="" />
+            </div>
+            <div class="texts">
+              <h3>Needs Assesment</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
           </div>
-          <div class="texts">
-            <h3>Needs Assesment</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-          </div>
-        </div>
 
-        <div class="flex-container">
-          <div class="checkmark">
-            <img src="/Checkmark.png" alt="" />
+          <div class="flex-container">
+            <div class="checkmark">
+              <img src="Checkmark.png" alt="" />
+            </div>
+            <div class="texts">
+              <h3>Insuarance Advocacy</h3>
+              <p>Ut enim ad minim veniam, quis nostrud exercitation.</p>
+            </div>
           </div>
-          <div class="texts">
-            <h3>Insuarance Advocacy</h3>
-            <p>Ut enim ad minim veniam, quis nostrud exercitation.</p>
-          </div>
-        </div>
 
-        <div class="flex-container">
-          <div class="checkmark">
-            <img src="/Checkmark.png" alt="" />
-          </div>
-          <div class="texts">
-            <h3>Treatment Planning & Placement</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod.
-            </p>
+          <div class="flex-container">
+            <div class="checkmark">
+              <img src="Checkmark.png" alt="" />
+            </div>
+            <div class="texts">
+              <h3>Treatment Planning & Placement</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod.
+              </p>
+            </div>
           </div>
         </div>
       </div>
-      <div class="video">
-        <img src="/image 2.1.png" alt="" />
+
+      <div class="video" id="vid">
+        <img src="image 2.1.png" alt="" />
       </div>
-      <img class="logo" src="/logo.svg" alt="" />
+      <a href="#vid" onclick="lightbox_open();">
+        <div class="play-btn">
+          <img class="polygon" src="Polygon.svg" alt="" />
+          <div class="ellipse"></div></div
+      ></a>
+      <img class="logo" src="logo.svg" alt="" />
+
+      <div id="light">
+        <a class="boxclose" id="boxclose" onclick="lightbox_close();"></a>
+        <video id="SampleVideo" width="600" controls>
+          <source
+            src="https://www.w3schools.com/html/mov_bbb.mp4"
+            type="video/mp4"
+          />
+        </video>
+      </div>
+
+      <div id="fade" onClick="lightbox_close();"></div>
     </section>
 
     <!-- FOOTER -->
@@ -286,5 +342,6 @@
       </ul>
     </footer>
     <script src="index.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
   </body>
 </html>
