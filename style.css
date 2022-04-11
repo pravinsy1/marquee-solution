@@ -189,6 +189,7 @@ form{
     border-radius: 12px;
     width: 472px;
     margin-left: 138px;
+    justify-content: center;
     /* display: inline-block; */
     
 }
@@ -232,6 +233,9 @@ input::placeholder, select::placeholder {
     font-weight: 400;
     
 }
+/* input:required:invalid{
+    border: 1px solid #FF7777;
+} */
 /* input:active + ::placeholder {
     transform: translateY(-25px);
     
@@ -583,6 +587,60 @@ padding: 30px 0;
   .tooltip:hover .tooltiptext {
     visibility: visible;
   } */
+
+
+  /* POPPER JS */
+  #tooltip {
+    background: #0095FF;
+    color: white;
+    font-weight: bold;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+    border-radius: 4px;
+    display: none;
+    width: 300px;
+    height: 84px;
+    padding: 12px 16px;
+  }
+
+  #tooltip[data-show] {
+    display: block;
+  }
+
+  #arrow,
+  #arrow::before {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: inherit;
+  }
+
+  #arrow {
+    visibility: hidden;
+  }
+
+  #arrow::before {
+    visibility: visible;
+    content: '';
+    transform: rotate(45deg);
+  }
+
+  #tooltip[data-popper-placement^='top'] > #arrow {
+    bottom: -4px;
+  }
+
+  #tooltip[data-popper-placement^='bottom'] > #arrow {
+    top: -4px;
+  }
+
+  #tooltip[data-popper-placement^='left'] > #arrow {
+    right: -4px;
+  }
+
+  #tooltip[data-popper-placement^='right'] > #arrow {
+    left: -4px;
+  }
 /*=================================================================*/
 /*                      SECTION 5                             
 /*=================================================================*/
@@ -817,7 +875,7 @@ ul{
     font-weight: 400;
 }
 /*TOOLTIP */
-#tooltip {
+/* #tooltip {
     display: inline-block;
     background: #FF7777;
     color: #fff;
@@ -826,8 +884,8 @@ ul{
     padding: 5px 10px;
     font-size: 13px;
     border-radius: 4px;
-    /* width: 168px; */
-    /* height: 40px; */
+    width: 168px;
+    height: 40px;
   }
   
   #arrow,
@@ -850,4 +908,72 @@ ul{
   
   #tooltip[data-popper-placement^='bottom'] > #arrow {
     top: -4px;
-  }
+  } */
+
+
+/* Responsive */
+@media only screen and (max-width: 768px) {
+    .section1{
+        height: 1090px;
+        max-width: 768px;
+    }
+    header{
+        max-width: 768px;
+        padding-top: 20.5px;
+        padding-left: 24px;
+        padding-right: 24px;
+        justify-content: space-between;
+    }
+    .nav{
+        justify-content: flex-end;
+        
+    }
+    ul{
+        margin-top: 18px;
+    }
+    .nav .hr{
+        display: none;
+    }
+    .hero{
+        padding-left: 97px;
+        padding-right: 97px;
+        max-width: 768px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+    .hero-text h1{
+        margin-top: 56px;
+        width: 574px;
+        height: 144px;
+        margin-bottom: 16px;
+    }
+    form{
+        margin: auto;
+        margin-top: 56px;
+        margin-bottom: 74px;
+        justify-content: center;
+    }
+    .section2{
+        max-width: 768px;
+        height: 736px;
+        padding-left: 24px;
+        padding-right: 24px;
+        justify-content: space-between;
+    }
+    .images img{
+        width: 224px;
+        height: 128px;
+    }
+    .flex-container h2{
+        width: 344px;
+    }
+    .flex-container .hr{
+        width: 349px;
+    }
+    .text-field{
+        max-width: 768px;
+    }
+
+}

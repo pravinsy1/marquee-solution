@@ -56,7 +56,8 @@
             ad minim veniam, quis nostrud exercitation.
           </p>
         </div>
-        <form action="">
+
+        <form action="#section1">
           <h2>Contact Us</h2>
           <!-- <div class="field"> -->
           <input
@@ -64,7 +65,15 @@
             id="First_name"
             type="text"
             placeholder="First Name"
+            required
           />
+          <div class="invalid-tooltip">
+            This field can’t be empty. Please fill it in.
+          </div>
+          <!-- <div id="tooltip" role="tooltip">
+            This field can’t be empty. Please fill it in.
+            <div id="arrow" data-popper-arrow></div>
+          </div> -->
           <!-- <label for="First_name">First Name</label> -->
           <!-- </div> -->
           <!-- <div id="tooltip" role="tooltip">
@@ -77,6 +86,7 @@
             id="Last_name"
             type="text"
             placeholder="Last Name"
+            required
           />
           <!-- <label for="Last_name">Last Name</label> -->
           <!-- </div> -->
@@ -91,6 +101,7 @@
             id="Business_Email"
             type="text"
             placeholder="Business Email"
+            required
           />
           <!-- <label for="Business_Email">Business Email</label> -->
           <!-- </div> -->
@@ -101,14 +112,16 @@
             id="Company"
             type="text"
             placeholder="Company"
+            required
           />
           <!-- <label for="Company">Company</label> -->
           <!-- </div> -->
 
           <select name="country" id="country">
             <option value="country">Country</option>
+            <option value="India">India</option>
           </select>
-          <button class="primary-cta">
+          <button class="primary-cta" id="submit">
             <img src="arrow.png" alt="" /> Submit
           </button>
         </form>
@@ -269,7 +282,18 @@
         <div class="secondary-cta">Transportation & Logistics</div>
       </div>
       <div class="btn-container">
-        <div
+        <div id="button" class="secondary-cta" aria-describedby="tooltip">
+          Insuarance Advocacy
+          <div class="circle">
+            <img class="info" src="info.svg" alt="" />
+          </div>
+        </div>
+        <div id="tooltip" role="tooltip">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore.
+          <div id="arrow" data-popper-arrow></div>
+        </div>
+        <!-- <div
           class="secondary-cta"
           data-toggle="tooltip"
           data-placement="bottom"
@@ -279,7 +303,7 @@
           <div class="circle">
             <img class="info" src="info.svg" alt="" />
           </div>
-        </div>
+        </div> -->
         <!-- <div class="tooltip secondary-cta">
           Insuarance Advocacy
           <span class="tooltiptext">Tooltip text</span>

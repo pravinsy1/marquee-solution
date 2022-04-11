@@ -1,6 +1,6 @@
 // swiper
 const swiper = new Swiper('.swiper', {
-  loop: true,
+  // loop: true,
 
   // pagination
   pagination: {
@@ -38,51 +38,65 @@ function lightbox_close() {
   document.getElementById('fade').style.display = 'none';
   lightBoxVideo.pause();
 }
+//POPPER JS
+const button = document.querySelector('#button');
+      const tooltip = document.querySelector('#tooltip');
 
-// import { createPopper } from '@popperjs/core';
-// import '../Marquee Solution/style.css';
+      const popperInstance = Popper.createPopper(button, tooltip, {
+        modifiers: [
+          {
+            name: 'offset',
+            options: {
+              offset: [0, 8],
+            },
+          },
+        ],
+      });
 
-// const textbox = document.querySelector('.textbox');
-// const tooltip = document.querySelector('#tooltip');
+      function show() {
+        // Make the tooltip visible
+        tooltip.setAttribute('data-show', '');
 
-// createPopper(textbox, tooltip, {
-//   placement: 'bottom',
-//   modifiers: [
-//     {
-//       name: 'offset',
-//       options: {
-//         offset: [0, 8],
-//       },
-//     },
-//   ],
-// });
+        // Enable the event listeners
+        popperInstance.setOptions((options) => ({
+          ...options,
+          modifiers: [
+            ...options.modifiers,
+            { name: 'eventListeners', enabled: true },
+          ],
+        }));
 
-// import { createPopper } from '@popperjs/core';
-// const info = document.querySelector('.info');
-// const tooltip = document.querySelector('#tooltip');
-// createPopper(info, tooltip, {
-//   placement: 'bottom',
-// });
+        // Update its position
+        popperInstance.update();
+      }
 
-// function show() {
-//   tooltip.setAttribute('data-show', '');
+      function hide() {
+        // Hide the tooltip
+        tooltip.removeAttribute('data-show');
 
-//   // We need to tell Popper to update the tooltip position
-//   // after we show the tooltip, otherwise it will be incorrect
-//   popperInstance.update();
-// }
+        // Disable the event listeners
+        popperInstance.setOptions((options) => ({
+          ...options,
+          modifiers: [
+            ...options.modifiers,
+            { name: 'eventListeners', enabled: false },
+          ],
+        }));
+      }
 
-// function hide() {
-//   tooltip.removeAttribute('data-show');
-// }
+      const showEvents = ['mouseenter', 'focus'];
+      const hideEvents = ['mouseleave', 'blur'];
 
-// const showEvents = ['mouseenter', 'focus'];
-// const hideEvents = ['mouseleave', 'blur'];
+      showEvents.forEach((event) => {
+        button.addEventListener(event, show);
+      });
 
-// showEvents.forEach((event) => {
-//   button.addEventListener(event, show);
-// });
+      hideEvents.forEach((event) => {
+        button.addEventListener(event, hide);
+      });
 
-// hideEvents.forEach((event) => {
-//   button.addEventListener(event, hide);
-// });
+      //form submit
+      // function validateForm() {
+      //   alert("Your form has been Submited")
+      // }
+      // document.getElementById("submit").addEventListener("click", validateForm);
